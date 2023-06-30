@@ -1,0 +1,118 @@
+@import 'app/assets/styles/variables';
+
+.carousel {
+	@apply mb-20 grid grid-cols-4 gap-x-10 gap-y-20;
+}
+
+.item {
+	@apply relative cursor-pointer rounded-3xl bg-green p-5 pt-0 text-white;
+
+	.heading {
+		@apply mx-auto mb-5 block text-2xl font-bold;
+
+		> h2 {
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+	}
+
+	.description {
+		@apply animate-opacity p-3 pt-0 text-left text-sm opacity-90;
+	}
+
+	> div {
+		@apply relative;
+	}
+
+	.link {
+		@apply mb-2 mt-6 block text-center text-xs;
+
+		.link-word {
+			@apply relative px-2 py-2;
+		}
+
+		.link-word::after {
+			content: '';
+			@apply absolute -bottom-0.5 left-0 h-0.5 w-0 bg-green transition-all duration-300;
+		}
+
+		.link-word:hover::after {
+			@apply w-full;
+		}
+	}
+
+	&.active {
+		@apply scale-110 bg-white bg-cover bg-no-repeat p-7 pt-0 text-green shadow-2xl shadow-green transition-all duration-700 ease-in-out;
+		background-image: url('/images/bg-pattern.webp');
+
+		&::before {
+			@apply absolute left-0 top-0 h-full w-full rounded-3xl;
+			content: '';
+			background-image: linear-gradient(
+				0deg,
+				rgba($white, 1) 50%,
+				rgba(255, 255, 255, 0.5) 100%
+			);
+		}
+
+		.heading {
+			@apply text-3xl;
+		}
+	}
+}
+
+.variations {
+	@apply mt-6 grid animate-opacity grid-cols-4 gap-2.5;
+
+	&.medium {
+		> button {
+			@apply text-[0.8rem];
+		}
+	}
+
+	> button {
+		@apply rounded border border-solid bg-green px-0.5 py-1 text-center text-[0.7rem] font-semibold uppercase text-white transition-colors;
+
+		&.active {
+			@apply border border-solid border-gray bg-white text-green;
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.carousel {
+		@apply grid-cols-3 gap-x-20;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.carousel {
+		@apply grid-cols-2;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.carousel {
+		@apply mx-auto mb-20 flex w-1/2 flex-col;
+	}
+
+	.item {
+		&.active {
+			@apply scale-100;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.carousel {
+		@apply w-2/3;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.carousel {
+		@apply w-full;
+	}
+}

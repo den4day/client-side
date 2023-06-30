@@ -1,0 +1,27 @@
+.heading {
+	@apply w-1/2 text-6xl font-black leading-tight text-green;
+}
+
+@media screen and (max-width: 1200px) {
+	.heading {
+		@apply w-2/3;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.heading {
+		@apply w-full;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.heading {
+		@apply text-5xl;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.heading {
+		@apply text-4xl;
+	}
+}

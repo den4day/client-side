@@ -1,0 +1,9 @@
+.header {
+	@apply mb-20 flex items-center justify-between pt-5;
+}
+
+@media screen and (max-width: 768px) {
+	.header {
+		@apply block;
+	}
+}

@@ -1,0 +1,42 @@
+.layout {
+	@apply mx-auto box-border px-5;
+	max-width: 1360px;
+
+	main {
+		@apply bg-white px-10 text-black;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.layout {
+		max-width: 1180px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.layout {
+		max-width: 1000px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.layout {
+		max-width: 760px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.layout {
+		max-width: 580px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.layout {
+		max-width: none;
+
+		main {
+			@apply px-0;
+		}
+	}
+}

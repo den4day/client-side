@@ -1,0 +1,27 @@
+.sorting {
+	@apply mb-20 text-right;
+}
+
+@media screen and (max-width: 1200px) {
+	.sorting {
+		@apply mb-28;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.sorting {
+		@apply mb-24;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.sorting {
+		@apply mb-32;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.sorting {
+		@apply mb-32 text-center;
+	}
+}

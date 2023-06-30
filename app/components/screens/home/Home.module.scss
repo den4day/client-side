@@ -1,0 +1,21 @@
+.heading {
+	@apply mb-10;
+}
+
+@media screen and (max-width: 992px) {
+	.heading {
+		@apply mb-20;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.heading {
+		@apply mb-28;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.layout {
+		max-width: none;
+	}
+}

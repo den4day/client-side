@@ -1,0 +1,46 @@
+{
+	"name": "shop",
+	"version": "0.1.0",
+	"homepage": "https://den4day.github.io/client-side",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -d build"
+	},
+	"dependencies": {
+		"@chakra-ui/icons": "^2.0.19",
+		"@chakra-ui/react": "^2.7.0",
+		"@emotion/react": "^11.11.0",
+		"@emotion/styled": "^11.11.0",
+		"@reduxjs/toolkit": "^1.9.5",
+		"@tanstack/react-query": "^4.29.19",
+		"@types/node": "20.2.5",
+		"@types/react": "18.2.7",
+		"@types/react-dom": "18.2.4",
+		"axios": "^1.4.0",
+		"clsx": "^1.2.1",
+		"framer-motion": "^10.12.16",
+		"next": "13.4.4",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-icons": "^4.9.0",
+		"react-redux": "^8.0.7",
+		"react-simple-star-rating": "^5.1.7",
+		"redux-persist": "^6.0.0",
+		"sass": "^1.62.1",
+		"typescript": "5.0.4"
+	},
+	"devDependencies": {
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"autoprefixer": "^10.4.14",
+		"gh-pages": "^5.0.0",
+		"postcss": "^8.4.24",
+		"prettier": "^2.8.8",
+		"prettier-plugin-tailwindcss": "^0.3.0",
+		"tailwindcss": "^3.3.2"
+	}
+}

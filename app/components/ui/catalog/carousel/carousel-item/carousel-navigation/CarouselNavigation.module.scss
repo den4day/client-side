@@ -1,0 +1,30 @@
+.navigation {
+	@apply mb-5;
+
+	.image {
+		@apply mx-auto mt-5 block h-40 w-40;
+	}
+
+	.arrows {
+		@apply absolute flex animate-scaleIn items-center justify-between;
+		width: 120%;
+		top: 12%;
+		left: -10%;
+
+		.arrow {
+			@apply text-green transition-colors duration-300;
+
+			&:hover {
+				@apply text-gray;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.navigation {
+		.arrows {
+			@apply hidden;
+		}
+	}
+}

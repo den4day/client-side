@@ -1,0 +1,73 @@
+.wrapper-cart {
+	.heading {
+		@apply flex items-center;
+
+		.badge {
+			@apply mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-green p-1 text-sm text-white;
+		}
+
+		.cartImg {
+			@apply hidden;
+		}
+	}
+}
+
+.cart {
+	.item {
+		@apply mb-8 flex items-center justify-center border-b border-b-gray pb-6 pt-4;
+
+		&:last-child {
+			@apply border-b-0;
+		}
+
+		.info {
+			@apply ml-4;
+
+			.name {
+				@apply truncate font-semibold;
+			}
+
+			.price {
+				@apply mt-1 text-sm text-gray;
+			}
+
+			.variation {
+				@apply text-gray;
+			}
+		}
+	}
+}
+
+.footer {
+	> div:first-child {
+		@apply text-sm text-gray;
+	}
+
+	> div:last-child {
+		@apply text-lg font-semibold;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.wrapper-cart {
+		.heading {
+			.text {
+				@apply hidden;
+			}
+
+			.cartImg {
+				@apply mr-2 block;
+			}
+
+			.badge {
+				@apply mr-0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.wrapper-cart {
+		@apply hidden;
+	}
+}
